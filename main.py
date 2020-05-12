@@ -71,3 +71,13 @@ class HTML(Request):
             if name not in listchek:
                 listchek.append(name)
         return listchek
+    
+    
+    if __name__=='__main__':
+        file = open_file('C:/Users/Anton/Desktop/Python_course/Project/Article.txt','r')
+        print(re.findall(r'[A-Za-z]+',file))
+        html = 'http://vyshivayu.ru/spisok-uchastnikov-konkursa-krossvordov'
+        print(HTML(html).get_content())
+        print('Eng Name:',English(file).eng_name())
+        print('Rus Name:',Russian(file).ru_name())
+    
