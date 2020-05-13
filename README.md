@@ -8,9 +8,9 @@
    Анализ и обработка данных
    
    ## Библиотеки: 
-   re - Regular expression - регулярные выражения
-   requests - Библиотека для упрощения HTTP-запросов
-   BeautifulSoup - парсинг HTML
+  - re - Regular expression - регулярные выражения
+  - requests - Библиотека для упрощения HTTP-запросов
+  - BeautifulSoup - парсинг HTML
    ### Установка библиотек:
         pip3 install re
         pip3 install requests
