@@ -72,7 +72,7 @@ class HTML(Request):
         return listchek
 
 if __name__=='__main__':
-    file = open_file('C:/Users/Anton/Desktop/Python_course/Project/Article.txt')
+    file = open_file('Article.txt')
     print(re.findall(r'[A-Za-z]+',file))
     html = 'http://vyshivayu.ru/spisok-uchastnikov-konkursa-krossvordov'
     print(HTML(html).get_content())
