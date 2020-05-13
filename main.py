@@ -2,10 +2,9 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-def open_file(file,x):
-    openfile = open(file,x, encoding='utf-8')
-    if x == 'r':
-        return openfile.read()
+def open_file(file):
+    openfile = open(file, encoding='utf-8')
+    return openfile.read()
 
 class Request():
     def __init__(self, req):
@@ -71,13 +70,12 @@ class HTML(Request):
             if name not in listchek:
                 listchek.append(name)
         return listchek
-    
-    
-    if __name__=='__main__':
-        file = open_file('C:/Users/Anton/Desktop/Python_course/Project/Article.txt','r')
-        print(re.findall(r'[A-Za-z]+',file))
-        html = 'http://vyshivayu.ru/spisok-uchastnikov-konkursa-krossvordov'
-        print(HTML(html).get_content())
-        print('Eng Name:',English(file).eng_name())
-        print('Rus Name:',Russian(file).ru_name())
+
+if __name__=='__main__':
+    file = open_file('C:/Users/Anton/Desktop/Python_course/Project/Article.txt')
+    print(re.findall(r'[A-Za-z]+',file))
+    html = 'http://vyshivayu.ru/spisok-uchastnikov-konkursa-krossvordov'
+    print(HTML(html).get_content())
+    print('Eng Name:',English(file).eng_name())
+    print('Rus Name:',Russian(file).ru_name())
     
